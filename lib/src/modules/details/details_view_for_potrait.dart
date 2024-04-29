@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:photo_gallery/src/controller/suggestions_controller.dart';
 import 'package:photo_gallery/src/data/global_widgets/app_bar.dart';
-import 'package:photo_gallery/src/data/global_widgets/suggestion_text/details_photo_title_and_description.dart';
-import 'package:photo_gallery/src/data/global_widgets/suggestion_text/details_photo_view.dart';
-import 'package:photo_gallery/src/data/global_widgets/suggestion_text/see_more_button.dart';
-import 'package:photo_gallery/src/data/global_widgets/suggestion_text/suggestion_text.dart';
-import 'package:photo_gallery/src/data/global_widgets/suggestion_text/suggestions_grid_photo_view.dart';
+import 'package:photo_gallery/src/data/global_widgets/suggestions/details_photo_title_and_description.dart';
+import 'package:photo_gallery/src/data/global_widgets/suggestions/details_photo_view.dart';
+import 'package:photo_gallery/src/data/global_widgets/suggestions/see_more_button.dart';
+import 'package:photo_gallery/src/data/global_widgets/suggestions/suggestion_text.dart';
+import 'package:photo_gallery/src/data/global_widgets/suggestions/suggestions_grid_photo_view.dart';
 import 'package:photo_gallery/src/data/utils/custom_box_decoration.dart';
 import 'package:photo_gallery/src/data/utils/custom_colors.dart';
 
