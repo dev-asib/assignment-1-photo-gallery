@@ -17,9 +17,9 @@ class PhotoDetailsViewForDeviceLandscapeMode extends StatelessWidget {
   String detailsAppBarPhotoTitle;
 
   PhotoDetailsViewForDeviceLandscapeMode({super.key,
-  required this.detailsViewImgSrc,
-     required this.detailsImgDescriptionText,
-     required this.detialsImgTitleText,
+    required this.detailsViewImgSrc,
+    required this.detailsImgDescriptionText,
+    required this.detialsImgTitleText,
     required this.detailsAppBarPhotoTitle
   });
 
@@ -76,63 +76,63 @@ class PhotoDetailsViewForDeviceLandscapeMode extends StatelessWidget {
                 child: Wrap(
                   children: [
                     Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      DetailsPhotoTitleAndDescription(
-                        detailsPhotoTitleText: detialsImgTitleText,
-                        detailsPhotoDescription: detailsImgDescriptionText,
-                        detailsPhotoTitleColor: Colors.black,
-                        detailsPhototitleFontSize: 24,
-                        detailsPhototitleFontWeight: FontWeight.normal,
-                        detailsPhotoDescriptionColor: Colors.black,
-                        detailsPhotoDescriptionFontSize: 15,
-                        detailsPhotoDescriptionFontWeight: FontWeight.normal,
-                      ),
-                      Divider(
-                        color: Colors.transparent,
-                      ),
-                      SeeMoreButton(
-                        seeMoreButtonBackgroundColor:
-                        customColors.seeMoreButtonBackgroundColor,
-                        seeMoreButtonForegroundColor:
-                        customColors.seeMoreButtonForegroundColor,
-                        buttonMaximumSizeHeight: 51,
-                        buttonMaximumSizeWidth: screenWidth,
-                        buttonMinimumSizeHeight: 51,
-                        buttonMinimumSizeWidth: screenWidth,
-                        seeMoreButtonTextSize: 20,
-                      ),
-                      Divider(
-                        color: Colors.transparent,
-                      ),
-                      SuggestionText(
-                        suggestionsTextFontSize: 20,
-                      ),
-                      Divider(
-                        color: Colors.transparent,
-                      ),
-                      SuggestionPhotosView(
-                        item_Count: suggestionsPhotoData.suggestionsPhotoData.length,
-                        crossAxis_Spacing: 20,
-                        mainAxis_Spacing: 20,
-                        boxDecorationBorderRadius: 20,
-                        boxDecorationImageBoxFit: BoxFit.fill,
-                        photo_Height: 180,
-                        photo_Width: 180,
-                        gridViewTitleFontSize: 20,
-                        gridViewTitleFontWeight: FontWeight.bold,
-                        customAlignmentInContainerWidget: Alignment.bottomLeft,
-                        paddingInContainerWidget: EdgeInsets.only(left: 20, bottom: 20),
-                        crossAxis_Count: 2,
-                        boxDecorationBoxShadowSuggestionImageBlurRadius: 35,
-                        boxDecorationBoxShadowSuggestionImageSpreedRadius: 0,
-                        boxDecorationBoxShadowSuggestionImageShadowColor: Colors.black.withOpacity(0.5),
-                        boxDecorationBoxShadowSuggestionImageOffset_X: 0,
-                        boxDecorationBoxShadowSuggestionImageOffset_Y: 15,
-                      ),
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        DetailsPhotoTitleAndDescription(
+                          detailsPhotoTitleText: detialsImgTitleText,
+                          detailsPhotoDescription: detailsImgDescriptionText,
+                          detailsPhotoTitleColor: Colors.black,
+                          detailsPhototitleFontSize: 24,
+                          detailsPhototitleFontWeight: FontWeight.normal,
+                          detailsPhotoDescriptionColor: Colors.black,
+                          detailsPhotoDescriptionFontSize: 15,
+                          detailsPhotoDescriptionFontWeight: FontWeight.normal,
+                        ),
+                        Divider(
+                          color: Colors.transparent,
+                        ),
+                        SeeMoreButton(
+                          seeMoreButtonBackgroundColor:
+                          customColors.seeMoreButtonBackgroundColor,
+                          seeMoreButtonForegroundColor:
+                          customColors.seeMoreButtonForegroundColor,
+                          buttonMaximumSizeHeight: 51,
+                          buttonMaximumSizeWidth: screenWidth,
+                          buttonMinimumSizeHeight: 51,
+                          buttonMinimumSizeWidth: screenWidth,
+                          seeMoreButtonTextSize: 20,
+                        ),
+                        Divider(
+                          color: Colors.transparent,
+                        ),
+                        SuggestionText(
+                          suggestionsTextFontSize: 20,
+                        ),
+                        Divider(
+                          color: Colors.transparent,
+                        ),
+                        SuggestionPhotosView(
+                          item_Count: suggestionsPhotoData.suggestionsPhotoData.length,
+                          crossAxis_Spacing: 20,
+                          mainAxis_Spacing: 20,
+                          boxDecorationBorderRadius: 20,
+                          boxDecorationImageBoxFit: BoxFit.fill,
+                          photo_Height: 180,
+                          photo_Width: 180,
+                          gridViewTitleFontSize: 20,
+                          gridViewTitleFontWeight: FontWeight.bold,
+                          customAlignmentInContainerWidget: Alignment.bottomLeft,
+                          paddingInContainerWidget: EdgeInsets.only(left: 20, bottom: 20),
+                          crossAxis_Count: 2,
+                          boxDecorationBoxShadowSuggestionImageBlurRadius: 35,
+                          boxDecorationBoxShadowSuggestionImageSpreedRadius: 0,
+                          boxDecorationBoxShadowSuggestionImageShadowColor: Colors.black.withOpacity(0.5),
+                          boxDecorationBoxShadowSuggestionImageOffset_X: 0,
+                          boxDecorationBoxShadowSuggestionImageOffset_Y: 15,
+                        ),
 
-                    ],
-                  )],
+                      ],
+                    )],
                 ),
               ),
             ],
