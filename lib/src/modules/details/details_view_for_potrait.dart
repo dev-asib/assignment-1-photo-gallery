@@ -27,7 +27,7 @@ class PhotoDetailsViewForDevicePotraitMode extends StatelessWidget {
     double screenWidth = MediaQuery.sizeOf(context).width;
 
     double detailsPhotoWidth = screenWidth;
-    double detailsPhotoHeight = detailsPhotoWidth - 40;
+    double detailsPhotoHeight = detailsPhotoWidth - 80;
 
     CustomColors customColors = CustomColors();
     SuggestionsPhotoData suggestionsPhotoData = SuggestionsPhotoData();
@@ -38,11 +38,12 @@ class PhotoDetailsViewForDevicePotraitMode extends StatelessWidget {
         child: CustomAppBar(
           appBarLeadingBorderRadius: 10,
           appBarLeadingContainerColors: Colors.white.withOpacity(0.5),
-          appBarLeadingHeight: 45,
-          appBarLeadingWidth: 45,
+          appBarLeadingHeight: 40,
+          appBarLeadingWidth: 40,
           appBarToolBarHeight: 100,
-          appBarTitleFontSize: 25,
+          appBarTitleFontSize: 20,
           appBarTitleText: detailsAppBarPhotoTitle,
+          customFontWeight: FontWeight.w600,
         ),
       ),
       body: SingleChildScrollView(
@@ -57,50 +58,74 @@ class PhotoDetailsViewForDevicePotraitMode extends StatelessWidget {
                   photoHeight: detailsPhotoHeight,
                   photoDecoration: customBoxDecoration(
                     boxDecorationColor: Colors.green,
-                    boxDecorationRadius: 40,
+                    boxDecorationRadius: 30,
                     boxDecorationImageSrc: detailsViewImgSrc,
                     boxDecorationImageBoxFit: BoxFit.fill,
+                    boxDecorationBoxShadowImageBlurRadius: 35,
+                    boxDecorationBoxShadowImageShadowColor: Colors.black.withOpacity(0.5),
+                    boxDecorationBoxShadowImageSpreedRadius: 0,
+                    boxDecorationBoxShadowImageOffset_X: 5,
+                    boxDecorationBoxShadowImageOffset_Y: 12,
                   ),
-                  detailsPhotoCardBorderRadius: 40,
-                  detailsPhotoCardElevation: 16,
-                  detailsPhotoCardShadowColor: Colors.grey,
+
+              ),
+              Divider(
+                color: Colors.transparent,
               ),
               DetailsPhotoTitleAndDescription(
                 detailsPhotoTitleText: detialsImgTitleText,
                 detailsPhotoDescription: detailsImgDescriptionText,
                 detailsPhotoTitleColor: Colors.black,
-                detailsPhototitleFontSize: 30,
+                detailsPhototitleFontSize: 24,
                 detailsPhototitleFontWeight: FontWeight.normal,
                 detailsPhotoDescriptionColor: Colors.black,
                 detailsPhotoDescriptionFontSize: 15,
                 detailsPhotoDescriptionFontWeight: FontWeight.normal,
+              ),
+              Divider(
+                color: Colors.transparent,
               ),
               SeeMoreButton(
                 seeMoreButtonBackgroundColor:
                     customColors.seeMoreButtonBackgroundColor,
                 seeMoreButtonForegroundColor:
                     customColors.seeMoreButtonForegroundColor,
-                buttonMaximumSizeHeight: 40,
+                buttonMaximumSizeHeight: 51,
                 buttonMaximumSizeWidth: screenWidth,
-                buttonMinimumSizeHeight: 40,
+                buttonMinimumSizeHeight: 51,
                 buttonMinimumSizeWidth: screenWidth,
+                seeMoreButtonTextSize: 20,
               ),
-              SuggestionText(),
+              Divider(
+                color: Colors.transparent,
+              ),
+              SuggestionText(
+                suggestionsTextFontSize: 20,
+              ),
+              Divider(
+                color: Colors.transparent,
+              ),
               SuggestionPhotosView(
                 item_Count: suggestionsPhotoData.suggestionsPhotoData.length,
                 crossAxis_Spacing: 20,
                 mainAxis_Spacing: 20,
                 boxDecorationBorderRadius: 20,
                 boxDecorationImageBoxFit: BoxFit.fill,
-                photo_Height: 0,
-                photo_Width: 0,
+                photo_Height: 180,
+                photo_Width: 180,
                 gridViewTitleFontSize: 20,
                 gridViewTitleFontWeight: FontWeight.bold,
                 customAlignmentInContainerWidget: Alignment.bottomLeft,
                 paddingInContainerWidget: EdgeInsets.only(left: 20, bottom: 20),
-                detailsPhotoCardBorderRadius: 20,
-                detailsPhotoCardElevation: 16,
                 crossAxis_Count: 2,
+                boxDecorationBoxShadowSuggestionImageBlurRadius: 35,
+                boxDecorationBoxShadowSuggestionImageSpreedRadius: 0,
+                boxDecorationBoxShadowSuggestionImageShadowColor: Colors.black.withOpacity(0.5),
+                boxDecorationBoxShadowSuggestionImageOffset_X: 0,
+                boxDecorationBoxShadowSuggestionImageOffset_Y: 15,
+              ),
+              Divider(
+                color: Colors.transparent,
               ),
             ],
           ),

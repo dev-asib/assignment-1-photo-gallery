@@ -9,7 +9,7 @@ Container appBarLeading({
   required Widget appBarLeadingWidget,
 }){
   return Container(
-    padding: EdgeInsets.only(left: 10.0),
+    padding: EdgeInsets.only(left: 11),
       height: appBarLeadingHeight,
       width: appBarLeadingWidth,
       decoration: BoxDecoration(

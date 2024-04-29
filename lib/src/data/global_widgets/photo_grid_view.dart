@@ -22,8 +22,12 @@ class GalleryPhotosView extends StatelessWidget {
   double gridViewTitleFontSize;
   Alignment customAlignmentInContainerWidget;
   EdgeInsets paddingInContainerWidget;
-  double detailsPhotoCardElevation;
-  double detailsPhotoCardBorderRadius;
+  double boxDecorationBoxShadowGridViewImageBlurRadius;
+  double boxDecorationBoxShadowGridViewImageSpreedRadius;
+  Color boxDecorationBoxShadowGridViewImageShadowColor;
+  double boxDecorationBoxShadowGridViewImageOffset_X;
+  double boxDecorationBoxShadowGridViewImageOffset_Y;
+
   GalleryPhotosView(
       {super.key,
       required this.crossAxis_Count,
@@ -38,8 +42,12 @@ class GalleryPhotosView extends StatelessWidget {
       required this.gridViewTitleFontWeight,
       required this.customAlignmentInContainerWidget,
       required this.paddingInContainerWidget,
-        required this.detailsPhotoCardBorderRadius,
-        required this.detailsPhotoCardElevation,
+        required this.boxDecorationBoxShadowGridViewImageBlurRadius,
+        required this.boxDecorationBoxShadowGridViewImageOffset_X,
+        required this.boxDecorationBoxShadowGridViewImageOffset_Y,
+        required this.boxDecorationBoxShadowGridViewImageShadowColor,
+        required this.boxDecorationBoxShadowGridViewImageSpreedRadius,
+
       });
 
   @override
@@ -82,15 +90,21 @@ class GalleryPhotosView extends StatelessWidget {
               boxDecorationRadius: boxDecorationBorderRadius,
               boxDecorationImageSrc: gridImg_Src,
               boxDecorationImageBoxFit: boxDecorationImageBoxFit,
+
+              boxDecorationBoxShadowImageBlurRadius: boxDecorationBoxShadowGridViewImageBlurRadius,
+              boxDecorationBoxShadowImageSpreedRadius: boxDecorationBoxShadowGridViewImageSpreedRadius,
+              boxDecorationBoxShadowImageShadowColor: boxDecorationBoxShadowGridViewImageShadowColor,
+              boxDecorationBoxShadowImageOffset_X: boxDecorationBoxShadowGridViewImageOffset_X,
+              boxDecorationBoxShadowImageOffset_Y: boxDecorationBoxShadowGridViewImageOffset_Y,
+
+
             ),
             customWidget: gridViewImageTitle(
               gridViewImageTitile: gridImg_Title,
               customFontWeight: gridViewTitleFontWeight,
               customFontSize: gridViewTitleFontSize,
             ),
-            detailsPhotoCardElevation: detailsPhotoCardElevation,
-            detailsPhotoCardBorderRadius: detailsPhotoCardBorderRadius,
-              detailsPhotoCardShadowColor: Colors.grey
+
           ),
         );
       },

@@ -6,6 +6,11 @@ required Color boxDecorationColor,
     required double boxDecorationRadius,
       required boxDecorationImageSrc,
       required BoxFit boxDecorationImageBoxFit,
+      required double boxDecorationBoxShadowImageBlurRadius,
+      required double boxDecorationBoxShadowImageSpreedRadius,
+      required double boxDecorationBoxShadowImageOffset_X,
+      required double boxDecorationBoxShadowImageOffset_Y,
+      required Color boxDecorationBoxShadowImageShadowColor,
     }
     ){
       return BoxDecoration(
@@ -14,5 +19,13 @@ required Color boxDecorationColor,
         image: DecorationImage(image: AssetImage(boxDecorationImageSrc),
         fit: boxDecorationImageBoxFit
         ),
+        boxShadow: [
+          BoxShadow(
+            blurRadius: boxDecorationBoxShadowImageBlurRadius,
+            spreadRadius: boxDecorationBoxShadowImageSpreedRadius,
+            offset: Offset(boxDecorationBoxShadowImageOffset_X, boxDecorationBoxShadowImageOffset_Y),
+            color: boxDecorationBoxShadowImageShadowColor,
+          ),
+        ]
       );
 }

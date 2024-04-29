@@ -9,6 +9,7 @@ class SeeMoreButton extends StatelessWidget {
   double buttonMaximumSizeHeight;
   double buttonMinimumSizeWidth;
   double buttonMinimumSizeHeight;
+  double seeMoreButtonTextSize;
 
   SeeMoreButton({
     super.key,
@@ -18,6 +19,7 @@ class SeeMoreButton extends StatelessWidget {
     required this.buttonMaximumSizeWidth,
     required this.buttonMinimumSizeHeight,
     required this.buttonMinimumSizeWidth,
+    required this.seeMoreButtonTextSize,
   });
 
   @override
@@ -26,16 +28,19 @@ class SeeMoreButton extends StatelessWidget {
 
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
+        elevation: 10,
+          shadowColor: Colors.black.withOpacity(0.5),
           backgroundColor: seeMoreButtonBackgroundColor,
           foregroundColor: seeMoreButtonForegroundColor,
           maximumSize: Size(buttonMaximumSizeWidth, buttonMaximumSizeHeight),
           minimumSize: Size(buttonMinimumSizeWidth, buttonMinimumSizeHeight)),
+
       onPressed: () {},
       child: Text(
         "See More",
         style: CustomTextStyle(
           customFontWeight: FontWeight.normal,
-          customFontSize: 16,
+          customFontSize: seeMoreButtonTextSize,
           customTextColor: Colors.white,
           customFontFamily: 'Poppins-Regular',
         ),

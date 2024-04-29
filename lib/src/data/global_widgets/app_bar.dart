@@ -15,6 +15,7 @@ class CustomAppBar extends StatelessWidget {
   double appBarToolBarHeight;
   String appBarTitleText;
   double appBarTitleFontSize;
+  FontWeight customFontWeight;
   CustomAppBar({
     super.key,
     required this.appBarLeadingBorderRadius,
@@ -24,6 +25,7 @@ class CustomAppBar extends StatelessWidget {
     required this.appBarToolBarHeight,
     required this.appBarTitleText,
     required this.appBarTitleFontSize,
+    required this.customFontWeight,
   });
 
   @override
@@ -35,7 +37,7 @@ class CustomAppBar extends StatelessWidget {
         automaticallyImplyLeading: false,
         backgroundColor: customColors.appBarBackgroundColor,
         title: Padding(
-          padding: const EdgeInsets.only(left: 8.0, bottom: 8.0),
+          padding: const EdgeInsets.only(left: 17.24, bottom: 8.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -58,6 +60,7 @@ class CustomAppBar extends StatelessWidget {
                 child: appBarTitle(
                   appBarTitleText: appBarTitleText,
                   appBarTitleFontSize: appBarTitleFontSize,
+                  customFontWeight: customFontWeight,
                 ),
               ),
               Flexible(

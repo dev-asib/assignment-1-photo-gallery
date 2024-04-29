@@ -23,8 +23,12 @@ class SuggestionPhotosView extends StatelessWidget {
   double gridViewTitleFontSize;
   Alignment customAlignmentInContainerWidget;
   EdgeInsets paddingInContainerWidget;
-  double detailsPhotoCardElevation;
-  double detailsPhotoCardBorderRadius;
+  double boxDecorationBoxShadowSuggestionImageBlurRadius;
+  double boxDecorationBoxShadowSuggestionImageSpreedRadius;
+  Color boxDecorationBoxShadowSuggestionImageShadowColor;
+  double boxDecorationBoxShadowSuggestionImageOffset_X;
+  double boxDecorationBoxShadowSuggestionImageOffset_Y;
+
   SuggestionPhotosView(
       {super.key,
         required this.crossAxis_Count,
@@ -39,8 +43,12 @@ class SuggestionPhotosView extends StatelessWidget {
         required this.gridViewTitleFontWeight,
         required this.customAlignmentInContainerWidget,
         required this.paddingInContainerWidget,
-        required this.detailsPhotoCardBorderRadius,
-        required this.detailsPhotoCardElevation,
+        required this.boxDecorationBoxShadowSuggestionImageBlurRadius,
+        required this.boxDecorationBoxShadowSuggestionImageOffset_X,
+        required this.boxDecorationBoxShadowSuggestionImageOffset_Y,
+        required this.boxDecorationBoxShadowSuggestionImageShadowColor,
+        required this.boxDecorationBoxShadowSuggestionImageSpreedRadius,
+
       });
 
   @override
@@ -82,15 +90,17 @@ class SuggestionPhotosView extends StatelessWidget {
                 boxDecorationRadius: boxDecorationBorderRadius,
                 boxDecorationImageSrc: gridImg_Src,
                 boxDecorationImageBoxFit: boxDecorationImageBoxFit,
+                boxDecorationBoxShadowImageBlurRadius: boxDecorationBoxShadowSuggestionImageBlurRadius,
+                boxDecorationBoxShadowImageSpreedRadius: boxDecorationBoxShadowSuggestionImageSpreedRadius,
+                boxDecorationBoxShadowImageShadowColor: boxDecorationBoxShadowSuggestionImageShadowColor,
+                boxDecorationBoxShadowImageOffset_X: boxDecorationBoxShadowSuggestionImageOffset_X,
+                boxDecorationBoxShadowImageOffset_Y: boxDecorationBoxShadowSuggestionImageOffset_Y,
               ),
               customWidget: gridViewImageTitle(
                 gridViewImageTitile: gridImg_Title,
                 customFontWeight: gridViewTitleFontWeight,
                 customFontSize: gridViewTitleFontSize,
               ),
-              detailsPhotoCardElevation: detailsPhotoCardElevation,
-              detailsPhotoCardBorderRadius: detailsPhotoCardBorderRadius,
-              detailsPhotoCardShadowColor: Colors.grey
           ),
         );
       },

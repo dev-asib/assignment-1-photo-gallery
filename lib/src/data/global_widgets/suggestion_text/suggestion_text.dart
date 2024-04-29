@@ -4,7 +4,10 @@ import 'package:photo_gallery/src/data/utils/custom_text_style.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SuggestionText extends StatelessWidget {
-  const SuggestionText({super.key});
+  double suggestionsTextFontSize;
+   SuggestionText({super.key,
+   required this.suggestionsTextFontSize,
+   });
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +16,7 @@ class SuggestionText extends StatelessWidget {
       "Suggestions",
       style:CustomTextStyle(
         customFontWeight: FontWeight.normal,
-        customFontSize: 25,
+        customFontSize: suggestionsTextFontSize,
         customTextColor: customColors.suggestionsTextColor,
         customFontFamily: 'Poppins-Regular'
       ),
