@@ -35,7 +35,7 @@ class PhotoDetailsViewForDeviceLandscapeMode extends StatelessWidget {
     SuggestionsPhotoData suggestionsPhotoData = SuggestionsPhotoData();
     return Scaffold(
       appBar:   PreferredSize(
-        preferredSize: Size(double.infinity, kToolbarHeight),
+        preferredSize: Size.fromHeight(kToolbarHeight),
         child: CustomAppBar(
           appBarLeadingBorderRadius: 10,
           appBarLeadingContainerColors: Colors.white.withOpacity(0.5),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:photo_gallery/src/modules/home/home_view_for_landscape/home_view_for_landscape_mode.dart';
 import 'package:photo_gallery/src/modules/home/home_view_for_potrait/home_view_for_potrait_mode.dart';
+
 class HomeActivity extends StatelessWidget {
   const HomeActivity({super.key});
   @override

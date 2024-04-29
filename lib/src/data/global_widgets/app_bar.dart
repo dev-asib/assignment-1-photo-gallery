@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:photo_gallery/src/data/global_widgets/app_bar_leading.dart';
 import 'package:photo_gallery/src/data/global_widgets/icon_theme.dart';
 import 'package:photo_gallery/src/data/global_widgets/app_bar_title.dart';
@@ -28,78 +29,54 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     CustomColors customColors = CustomColors();
-   /* return AppBar(
-      backgroundColor: customColors.appBarBackgroundColor,
-      leadingWidth: 80,
-      leading: Padding(
-        padding: const EdgeInsets.only(left: 20.0),
-        child: InkWell(
-          onTap: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeActivity()));
-          },
-          child: appBarLeading(
-            appBarLeadingHeight: appBarLeadingHeight,
-            appBarLeadingWidth: appBarLeadingWidth,
-            appBarLeadingBorderRadius: appBarLeadingBorderRadius,
-            appBarLeadingContainerColors: appBarLeadingContainerColors,
-            appBarLeadingWidget: Icon(Icons.arrow_back_ios),
+
+    return LayoutBuilder(builder: (BuildContext context, BoxConstraints boxConstraints){
+      return AppBar(
+        automaticallyImplyLeading: false,
+        backgroundColor: customColors.appBarBackgroundColor,
+        title: Padding(
+          padding: const EdgeInsets.only(left: 8.0, bottom: 8.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Flexible(
+                child: InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeActivity()));
+                  },
+                  child:appBarLeading(
+                    appBarLeadingHeight: appBarLeadingHeight,
+                    appBarLeadingWidth: appBarLeadingWidth,
+                    appBarLeadingBorderRadius: appBarLeadingBorderRadius,
+                    appBarLeadingContainerColors: appBarLeadingContainerColors,
+                    appBarLeadingWidget: Icon(Icons.arrow_back_ios, size: 30, color: Colors.white,),
+                  ),
+                ),
+              ),
+              Flexible(
+                flex: 2,
+                child: appBarTitle(
+                  appBarTitleText: appBarTitleText,
+                  appBarTitleFontSize: appBarTitleFontSize,
+                ),
+              ),
+              Flexible(
+                child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.more_vert, size: 30, color: Colors.white,),
+                ),
+              ),
+
+            ],
           ),
         ),
-      ),
-      title: appBarTitle(
-        appBarTitleText: appBarTitleText,
-        appBarTitleFontSize: appBarTitleFontSize,
-      ),
-      
-      
-
-      
-      
-      actions: [
-        IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.more_vert),
-        ),
-      ],
-      centerTitle: true,
-      iconTheme: appBarIconThemeData(),
-      toolbarHeight: appBarToolBarHeight,
-    );*/
-
-    return AppBar(
-      automaticallyImplyLeading: false,
-      backgroundColor: customColors.appBarBackgroundColor,
-      title: Padding(
-        padding: const EdgeInsets.only(left: 8.0, bottom: 8.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            InkWell(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeActivity()));
-              },
-              child:appBarLeading(
-                appBarLeadingHeight: appBarLeadingHeight,
-                appBarLeadingWidth: appBarLeadingWidth,
-                appBarLeadingBorderRadius: appBarLeadingBorderRadius,
-                appBarLeadingContainerColors: appBarLeadingContainerColors,
-                appBarLeadingWidget: Icon(Icons.arrow_back_ios, size: 30, color: Colors.white,),
-            ),
-            ),
-            appBarTitle(
-              appBarTitleText: appBarTitleText,
-              appBarTitleFontSize: appBarTitleFontSize,
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.more_vert, size: 30, color: Colors.white,),
-            ),
-
-          ],
-        ),
-      ),
-      toolbarHeight: 200,
-    );
+        toolbarHeight: 200,
+      );
+    });
 
   }
 }
+
+
+
+

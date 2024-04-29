@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:photo_gallery/src/data/utils/custom_text_style.dart';
 
 class DetailsPhotoTitleAndDescription extends StatelessWidget {
@@ -32,6 +33,7 @@ class DetailsPhotoTitleAndDescription extends StatelessWidget {
           customFontWeight: detailsPhototitleFontWeight,
           customFontSize: detailsPhototitleFontSize,
           customTextColor: detailsPhotoTitleColor,
+          customFontFamily: 'Poppins-Regular'
         ),
       ),
       subtitle: Text(
@@ -40,6 +42,7 @@ class DetailsPhotoTitleAndDescription extends StatelessWidget {
         customFontWeight: detailsPhotoDescriptionFontWeight,
         customFontSize: detailsPhotoDescriptionFontSize,
         customTextColor: detailsPhotoDescriptionColor,
+        customFontFamily: 'Poppins-Regular'
       ),
       ),
     );
